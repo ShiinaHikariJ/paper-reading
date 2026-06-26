@@ -20,6 +20,7 @@
 | P014 | [LLM-based Framework for Bearing Fault Diagnosis](https://arxiv.org/abs/2411.02718) | 2025 | 大模型轴承故障诊断、振动信号文本化、原始信号Patch、参数高效微调、跨工况与跨数据集泛化 | Mechanical Systems and Signal Processing | [笔记](../notes/P014-LLM-based-bearing-fault-diagnosis.md) | 将轴承振动特征或原始Patch映射到LLM空间，探索大模型故障诊断与跨工况泛化。 |
 | P015 | [DiagLLM: Multimodal Reasoning with Large Language Model for Explainable Bearing Fault Diagnosis](https://scholar.google.com/scholar?q=DiagLLM%3A+Multimodal+Reasoning+with+Large+Language+Model+for+Explainable+Bearing+Fault+Diagnosis) | 2025 | 多模态大模型、包络谱图像、故障频率知识、少数据诊断、跨数据集泛化与可解释性 | Science China Information Sciences | [笔记](../notes/P015-DiagLLM-multimodal-reasoning-for-explainable-bearing-fault-diagnosis.md) | 构建多模态DiagLLM，融合包络谱图像和故障频率知识，实现可解释轴承故障诊断。 |
 | P016 | [BearLLM: A Prior Knowledge-Enhanced Bearing Health Management Framework with Unified Vibration Signal Representation](https://arxiv.org/abs/2408.11281) | 2024 | 多模态大模型、统一振动信号表示、大小模型协同、多数据集泛化、多任务轴承健康管理 | arXiv | [笔记](<../notes/P016-BearLLM-prior-knowledge-enhanced-bearing-health-management (1).md>) | 提出BearLLM，用统一振动表示和先验知识增强实现大小模型协同的轴承健康管理。 |
+| P017 | [BearGen: LLM-guided Signal Generation Framework for Bearing Fault Diagnosis](https://doi.org/10.1016/j.aei.2026.104400) | 2026 | 大模型引导信号生成、文本条件扩散、轴承故障数据增强、类别不平衡 | Advanced Engineering Informatics | [笔记](../notes/P017-BearGen-reading-notes.md) | 利用GPT生成故障标签和工况对应的信号描述，并将知识蒸馏至本地Qwen模型，再以描述为条件引导潜空间扩散模型生成轴承振动信号；在多个轴承数据集和类别不平衡场景中优于GAN及标签条件扩散方法，但仍存在描述依赖已知标签、物理约束不足和跨工况生成泛化尚未充分验证等问题。 |
 
 
 # 论文阅读清单
@@ -30,7 +31,7 @@
 | ---------------- | -------------- | ----------------------------------- |
 | 综述与通用基础          | P001、P002、P012 | 建立数据增强、LLM数据增强和预训练语言模型处理时间序列的整体认识   |
 | 数据增强与时间序列生成方法    | P003—P009、P013 | 提供传统增强、GAN、扩散模型、频域增强、约束生成和少样本故障生成基线 |
-| 大模型辅助数据增强与虚拟样本生成 | P010、P011      | 分析大模型如何规划增强策略、提供故障知识和辅助构造虚拟样本       |
+| 大模型辅助数据增强与虚拟样本生成 | P010、P011、P017 | 分析大模型如何规划增强策略、提供故障知识、生成条件并辅助构造虚拟样本 |
 | 大模型与机械故障诊断进展     | P014—P016      | 分析大模型直接诊断、多模态知识融合和大小模型协同的发展现状       |
 
 ---
@@ -99,6 +100,7 @@
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---: | -------------------------------- | ---------------------------------------- | -------------------------------------- | --- |
 | P010 | [Large language model to assist data augmentation in soft contrastive learning for few-shot machinery fault diagnosis](https://doi.org/10.1016/j.aei.2025.104078)                                                                       | 2026 | 大模型辅助数据增强、增强策略规划、软对比学习、少样本机械故障诊断 | Advanced Engineering Informatics         | [笔记](../notes/P010-LLM-CoTAugSCLFD.md) | 用LLM推荐机械信号增强策略，并结合软标签对比学习缓解少样本故障诊断问题。 |
 | P011 | [Virtual sample diffusion generation method guided by large language model-generated knowledge for enhancing information completeness and zero-shot fault diagnosis in building thermal systems](https://doi.org/10.1631/jzus.A2400560) | 2025 | 大模型知识引导、虚拟故障样本生成、零真实故障样本诊断       | Journal of Zhejiang University-SCIENCE A | [笔记](../notes/P011-LLM-KG-MTD.md)      | 用LLM生成故障知识引导KG-MTD虚拟样本生成，支持零真实故障样本训练。 |
+| P017 | [BearGen: LLM-guided Signal Generation Framework for Bearing Fault Diagnosis](https://doi.org/10.1016/j.aei.2026.104400) | 2026 | 大模型引导信号生成、文本条件扩散、轴承故障数据增强、类别不平衡 | Advanced Engineering Informatics | [笔记](../notes/P017-BearGen-reading-notes.md) | 利用LLM生成故障与工况描述并引导潜空间扩散模型生成轴承振动信号，探索大模型知识条件下的故障数据增强。 |
 
 ---
 
@@ -144,6 +146,8 @@ P006、P007 扩散时间序列生成
 P008、P009 频域保持与约束生成
   ↓
 P013 少样本故障时间序列生成
+  ↓
+P017 大模型引导轴承故障信号生成
 ```
 
 这条主线回答：
@@ -174,6 +178,8 @@ P002 LLM数据增强综述
 P010 LLM规划机械信号增强策略
   ↓
 P011 LLM知识引导虚拟故障样本生成
+  ↓
+P017 LLM文本条件引导轴承故障信号生成
   ↓
 结合P013研究大模型知识引导的少样本故障信号生成
 ```
