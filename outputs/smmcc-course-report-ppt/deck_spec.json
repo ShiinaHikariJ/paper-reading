@@ -1,0 +1,152 @@
+{
+  "deck_name": "smmcc-course-report-ppt",
+  "language": "Chinese",
+  "goal": "用正式、证据驱动的科研答辩叙事，说明简易多机协同计算平台的设计、实现、实验结果与工程启示。",
+  "deck_context": {
+    "source_summary": "课程报告实现了一个由一个控制节点和三个计算节点组成的简易多机协同计算平台。系统使用 IPv4 TCP Socket 通信、换行分隔 JSON 消息、Tkinter 中文控制界面，并以一轮或两轮 Map-Reduce 完成集合最大值、区间质数统计和与全局最大值互质的次大值任务。",
+    "core_claim": "并行收益并不由节点数量单独决定，而取决于计算粒度、通信开销、同步轮次和负载均衡之间的平衡。",
+    "canonical_terms": [
+      "控制节点",
+      "计算节点",
+      "TCP Socket",
+      "JSON",
+      "Map-Reduce",
+      "系统加速比",
+      "纯计算加速比"
+    ]
+  },
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 6,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "第 7 页经用户确认的纯文本科研答辩风提示词",
+    "size": "16:9 landscape, built-in default",
+    "quality": "built-in default",
+    "approved_sample_path": "origin_image/slide_07.png",
+    "input_context_preparation": "纯文本上下文；因图片编辑接口网络错误，不附加参考图片输入",
+    "handoff_rule": "必须使用相同的 built-in image_gen 纯文本 generate 路径；不可切换工具，无法调用时返回 blocker。"
+  },
+  "style": {
+    "name": "科研答辩风",
+    "visual_direction": "正式中文科研答辩，证据优先，结构严谨，中高信息密度；继承已确认样张的蓝白视觉体系和数字强调方式，但按页面语义改变构图。",
+    "color_palette": "白色 #FFFFFF 与浅灰 #F5F7FA 背景；深学术蓝 #003F8F 作为主结构色；研究蓝 #0B5CAD 与浅蓝 #EAF2FF 组织图表；正式红 #B5121B 仅强调核心结论和关键数字。",
+    "typography": "清晰准确的中文无衬线字体；大号左对齐标题；蓝色结构标签；正文黑色或深灰；关键结论少量红色加粗；所有数字和中文必须准确可读。",
+    "texture_and_finish": "平面、克制、干净，无渐变、无装饰性素材、无营销感。",
+    "deck_consistency": "所有页面保持相同配色、字体气质、线条语言和证据驱动的视觉层级；不得机械复制第 7 页版式。"
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "简易多机协同计算平台",
+      "role": "cover",
+      "intent": "建立项目对象、课程答辩属性和核心技术范围。",
+      "key_points": ["课程报告科研答辩", "TCP Socket · JSON · Map-Reduce · Tkinter"],
+      "local_context": {"required_background": "封面仅保留正式标题、副标题和技术关键词，不显示虚构姓名、学校或机构标识。"},
+      "layout": {"composition": "左侧大标题与技术关键词，右侧为一个控制节点连接三个计算节点的简洁网络拓扑；低密度、强秩序。"},
+      "visual_elements": {"main_visual": "一控三网络拓扑，细线连接，深蓝节点与少量红色信号点。"},
+      "constraints": ["不出现虚构姓名或机构", "封面文字精简", "不渲染页码"]
+    },
+    {
+      "number": 2,
+      "title": "多机并行的收益取决于计算与通信的平衡",
+      "role": "problem framing",
+      "intent": "提出答辩的核心工程问题。",
+      "key_points": ["单机处理大规模数据受到处理器性能与内存容量限制", "多机并行通过数据分片和局部计算缩短计算时间", "节点增加不必然带来等比例加速", "本项目以可运行、可观测的平台验证并行收益条件"],
+      "local_context": {"required_background": "核心判断：通信、同步和负载不均会抵消部分计算收益。"},
+      "layout": {"composition": "左侧为计算规模增长，中央为多机分片，右侧用平衡关系展示计算收益与通信开销；底部给出一句红色结论。"},
+      "visual_elements": {"main_visual": "计算收益与通信开销的平衡示意，不使用人物或装饰图。"},
+      "constraints": ["标题必须完整准确", "结论仅强调一次", "不渲染页码"]
+    },
+    {
+      "number": 3,
+      "title": "平台以一控三的主从架构组织协同计算",
+      "role": "architecture",
+      "intent": "解释系统组成、地址和双向任务流。",
+      "key_points": ["控制节点负责参数读取、数据分片、并发发送、结果规约和日志输出", "计算节点负责监听端口、解析任务、局部计算并返回结果", "Tkinter 界面统一完成文件选择、通信测试和实验触发", "三台计算节点统一监听 9000 端口"],
+      "local_context": {"required_background": "计算节点0：192.168.158.67:9000；计算节点1：192.168.158.68:9000；计算节点2：192.168.158.69:9000。上行发送局部结果、状态信息和节点计算时间。"},
+      "layout": {"composition": "顶部 Tkinter 中文控制界面，中部控制节点，底部横向三个计算节点；向下为任务流，向上为结果回传。"},
+      "visual_elements": {"main_visual": "严格按一控三关系绘制的系统架构图，IP 与端口清晰可读。"},
+      "constraints": ["节点数量必须为三个", "IP 和端口必须准确", "箭头方向清楚", "不渲染页码"]
+    },
+    {
+      "number": 4,
+      "title": "换行分隔的 JSON 消息让 TCP 任务边界可识别",
+      "role": "technical explainer",
+      "intent": "说明通信协议如何保证任务可解析和结果可观测。",
+      "key_points": ["TCP 保证可靠有序传输，但不保留应用层消息边界", "每条 JSON 消息以换行符结束，接收端累计读取后再解析", "task_type 支持 PING、MAX、PRIME_COUNT 和 COPRIME_SECOND_MAX", "结果消息返回 result、compute_time 和 status"],
+      "local_context": {"required_background": "关键字段包括 task_type、node_id、data、start、end、global_max、result、compute_time、status。"},
+      "layout": {"composition": "中央为控制节点与计算节点双向通信流，左右分别展示请求字段与响应字段；底部突出换行符作为消息边界。"},
+      "visual_elements": {"main_visual": "两个简化 JSON 消息块和一条 TCP 字节流，严禁大段代码。"},
+      "constraints": ["英文字段拼写必须准确", "中文必须清晰", "不渲染页码"]
+    },
+    {
+      "number": 5,
+      "title": "三个实验从流程验证递进到跨阶段依赖",
+      "role": "process",
+      "intent": "建立三个实验的递进关系和比较维度。",
+      "key_points": ["实验一：一轮 Map-Reduce 求整数集合最大值", "实验二：并行统计区间质数个数", "实验三：两轮 Map-Reduce 求与全局最大值互质的次大值", "任务依次覆盖基本流程、计算密集和跨阶段依赖"],
+      "local_context": {"required_background": "实验一用于验证分片、并发与规约；实验二用于观察加速效果；实验三用于观察同步屏障和通信开销。"},
+      "layout": {"composition": "由左至右的三阶段实验路线，每阶段包含任务、Map-Reduce 轮次和主要验证目标，难度逐级上升。"},
+      "visual_elements": {"main_visual": "三阶路线图，用 1、2、3 编号和细箭头连接。"},
+      "constraints": ["不得把三个实验画成无关系卡片", "突出递进逻辑", "不渲染页码"]
+    },
+    {
+      "number": 6,
+      "title": "实验一验证流程正确，但小任务无法体现并行优势",
+      "role": "data evidence",
+      "intent": "先证明平台功能正确，并解释小任务的性能局限。",
+      "key_points": ["30 个整数被划分到三个计算节点", "三个局部最大值分别为 102、999 和 1000", "控制节点规约得到全局最大值 1000", "结果与单机一致，校验通过", "通信固定开销大于比较计算开销"],
+      "local_context": {"required_background": "复杂度：单机 O(n)，每节点约 O(n/3)，控制节点规约 O(3)。实验一主要用于流程验证，不用于证明明显加速。"},
+      "layout": {"composition": "上方三份数据分片分别产生局部最大值，下方汇聚到全局最大值 1000；右侧以简短结论说明通信开销占主导。"},
+      "visual_elements": {"main_visual": "三节点汇聚图，1000 作为蓝色主数字，校验通过使用克制绿色标记。"},
+      "constraints": ["所有数字必须准确", "不得虚构耗时", "不渲染页码"]
+    },
+    {
+      "number": 7,
+      "title": "计算密集型任务取得约 2 倍端到端加速",
+      "role": "data evidence",
+      "intent": "以核心实验数据展示适合任务上的并行收益。",
+      "key_points": ["统计区间：2 至 1,000,000", "质数总数：78,498", "节点0：28,665；节点1：25,405；节点2：24,428", "单机时间 2.118 s，分布式系统时间 1.105 s", "系统加速比 1.92，纯计算加速比 2.02"],
+      "local_context": {"required_background": "纯计算时间 1.048 s。结论：计算密度足够高时，并行收益能够覆盖大部分通信开销；负载不均与调度规约使实测加速低于理论并行度 3。"},
+      "layout": {"composition": "使用已确认样张，不重新生成。"},
+      "visual_elements": {"main_visual": "已确认样张。"},
+      "constraints": ["使用已确认样张", "不重新生成"],
+      "sample_approved": true
+    },
+    {
+      "number": 8,
+      "title": "两轮同步使纯计算加速转化为系统减速",
+      "role": "comparison",
+      "intent": "用反例解释并行计算收益为何可能被系统开销吞噬。",
+      "key_points": ["第一轮规约得到全局最大值 M，第二轮依赖 M 搜索互质候选值", "数据量 200,000，全局最大值 10,000,000", "三个局部候选值为 9,899,807、9,899,637 和 9,999,999", "最终结果 9,999,999，与单机一致", "纯计算加速比 2.20，但系统加速比仅 0.269"],
+      "local_context": {"required_background": "单机总耗时 0.199355 s；分布式系统总耗时 0.741661 s；两轮纯计算时间约 0.0906 s。原因是两轮通信、大型 JSON 列表传输与同步等待。"},
+      "layout": {"composition": "左侧展示两轮 Map-Reduce 和中间同步屏障，右侧用 2.20 与 0.269 的强对比解释纯计算与系统总耗时差异。"},
+      "visual_elements": {"main_visual": "两轮流程图加速度指标对比，0.269 用红色突出为负面结果。"},
+      "constraints": ["候选值、耗时和加速比必须准确", "不得把 0.269 写成 2.69", "不渲染页码"]
+    },
+    {
+      "number": 9,
+      "title": "任务粒度、通信轮次和负载均衡共同决定性能",
+      "role": "comparison matrix",
+      "intent": "把三个实验提升为可迁移的并行系统工程结论。",
+      "key_points": ["实验一：整数集合分片，一轮 Map-Reduce，无跨阶段依赖，通信固定开销占主导", "实验二：连续整数区间，一轮 Map-Reduce，无跨阶段依赖，计算密度高但负载不完全均衡", "实验三：整数集合分片，两轮 Map-Reduce，第二轮依赖第一轮全局最大值，同步和大列表传输开销明显", "评价并行系统必须同时观察节点计算时间和系统总耗时"],
+      "local_context": {"required_background": "比较维度：数据划分方式、Map-Reduce 轮次、数据依赖、主要性能影响因素。"},
+      "layout": {"composition": "横向三实验、纵向四维度的紧凑学术比较矩阵，底部给出红色总判断。"},
+      "visual_elements": {"main_visual": "整洁的学术表格或矩阵，不使用仪表盘卡片。"},
+      "constraints": ["比较内容必须对应正确实验", "文字保持精炼可读", "不渲染页码"]
+    },
+    {
+      "number": 10,
+      "title": "优化重点应从增加节点转向减少无效开销",
+      "role": "summary",
+      "intent": "以可执行改进方向回应开场提出的核心判断。",
+      "key_points": ["使用二进制序列化或压缩传输替代大型 JSON 整数列表", "在计算节点缓存第一轮数据，第二轮仅广播全局最大值", "增加超时重试、故障节点剔除和任务重新分配", "基于历史耗时实施加权分片或动态调度", "扩展数据规模与节点数量，重复实验并报告均值和标准差"],
+      "local_context": {"required_background": "最终结论：并行收益来自足够大的计算粒度、较低通信占比和均衡负载，而不是简单增加节点。"},
+      "layout": {"composition": "五项优化沿一条由通信、缓存、容错、调度到评测的工程路径展开，底部以大号结论收束。"},
+      "visual_elements": {"main_visual": "五步优化路径和一个最终结论，不使用泛化的谢谢页。"},
+      "constraints": ["结论必须完整", "不出现 Thank you 或谢谢", "不渲染页码"]
+    }
+  ]
+}

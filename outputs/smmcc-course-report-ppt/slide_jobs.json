@@ -1,0 +1,342 @@
+{
+  "run_status": "slides_recorded",
+  "deck_name": "smmcc-course-report-ppt",
+  "selected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "第 7 页经用户确认的纯文本科研答辩风提示词",
+    "size": "16:9 landscape, built-in default",
+    "quality": "built-in default",
+    "approved_sample_path": "D:\\paper-reading-tracker\\outputs\\smmcc-course-report-ppt\\origin_image\\slide_07.png",
+    "input_context_preparation": "纯文本上下文；因图片编辑接口网络错误，不附加参考图片输入",
+    "handoff_rule": "必须使用相同的 built-in image_gen 纯文本 generate 路径；不可切换工具，无法调用时返回 blocker。"
+  },
+  "max_concurrent_slides": 6,
+  "slides": [
+    {
+      "slide_id": "slide_01",
+      "number": 1,
+      "title": "简易多机协同计算平台",
+      "job": "prompts/slide_01.json",
+      "out": "origin_image/slide_01.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f2235-a14b-7fb1-ba3d-60af41ae8659",
+        "agent_nickname": "Rawls",
+        "prompt": "prompts/slide_01.json",
+        "prompt_sha256": "4429741b001ef1a9e780db34075f83c01634cc9c86afb0ce1bfb08ac5eac5c02",
+        "dispatched_at": "2026-07-02T09:43:11Z"
+      },
+      "result": {
+        "agent_id": "019f2235-a14b-7fb1-ba3d-60af41ae8659",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f2235-a14b-7fb1-ba3d-60af41ae8659\\exec-a5cf454f-cef8-48eb-9b9a-6e55226f7f28.png",
+        "selected_source_sha256": "7e1e7217cdc59e63051de336f410a809eeb6ffae04940da5372b10b8cf4d2c13",
+        "final_image": "origin_image/slide_01.png",
+        "final_image_sha256": "7e1e7217cdc59e63051de336f410a809eeb6ffae04940da5372b10b8cf4d2c13",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Cover text is clear; three compute nodes and one control node are shown; style matches the approved academic blue-white system.",
+        "recorded_at": "2026-07-02T09:44:44Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_02",
+      "number": 2,
+      "title": "多机并行的收益取决于计算与通信的平衡",
+      "job": "prompts/slide_02.json",
+      "out": "origin_image/slide_02.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f2235-4feb-72e2-91ce-5d26aa243ef4",
+        "agent_nickname": "Aquinas",
+        "prompt": "prompts/slide_02.json",
+        "prompt_sha256": "55b25d389d9af2470cd288bb931fbb5c5c4545ca8eecd005e93f3f2e9b884c4a",
+        "dispatched_at": "2026-07-02T09:43:11Z"
+      },
+      "result": {
+        "agent_id": "019f2235-4feb-72e2-91ce-5d26aa243ef4",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f2235-4feb-72e2-91ce-5d26aa243ef4\\exec-bfbb9858-b3fb-4c72-b903-50fd46a34225.png",
+        "selected_source_sha256": "5ed8fd49f125a759055155372bb24dab5f75d9ddb1d6347c7b5c657232dcadcc",
+        "final_image": "origin_image/slide_02.png",
+        "final_image_sha256": "5ed8fd49f125a759055155372bb24dab5f75d9ddb1d6347c7b5c657232dcadcc",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Exact title, qualitative balance concept only, no fabricated dates or measurements, and all Chinese text is legible.",
+        "recorded_at": "2026-07-03T04:19:52Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_03",
+      "number": 3,
+      "title": "平台以一控三的主从架构组织协同计算",
+      "job": "prompts/slide_03.json",
+      "out": "origin_image/slide_03.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f2235-b55c-7153-8f19-dbccdfb9e9fa",
+        "agent_nickname": "Ptolemy",
+        "prompt": "prompts/slide_03.json",
+        "prompt_sha256": "89b3659f2885a4600f9b6b537e973f94cfb5f212b626f88f0608cc7929fad048",
+        "dispatched_at": "2026-07-02T09:43:11Z"
+      },
+      "result": {
+        "agent_id": "019f2235-b55c-7153-8f19-dbccdfb9e9fa",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f2235-b55c-7153-8f19-dbccdfb9e9fa\\exec-0385f379-9c5c-4f5d-9589-128fac2c46d4.png",
+        "selected_source_sha256": "dc6978e201e8748df9523c34ef3b28eb0fb69b9eff07d51f9be5fe172a63eeba",
+        "final_image": "origin_image/slide_03.png",
+        "final_image_sha256": "dc6978e201e8748df9523c34ef3b28eb0fb69b9eff07d51f9be5fe172a63eeba",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Control node has no invented address or port; all three compute-node IP addresses and port 9000 are accurate and readable.",
+        "recorded_at": "2026-07-03T04:22:02Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_04",
+      "number": 4,
+      "title": "换行分隔的 JSON 消息让 TCP 任务边界可识别",
+      "job": "prompts/slide_04.json",
+      "out": "origin_image/slide_04.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f2235-649c-7a80-8171-96687fc80865",
+        "agent_nickname": "Laplace",
+        "prompt": "prompts/slide_04.json",
+        "prompt_sha256": "1467596a054ada7ec68093b9c043f50bf7b87f8caffe03870742c639333597e1",
+        "dispatched_at": "2026-07-02T09:43:11Z"
+      },
+      "result": {
+        "agent_id": "019f2235-649c-7a80-8171-96687fc80865",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f2235-649c-7a80-8171-96687fc80865\\exec-09dc7c42-020d-4f91-9d3d-4ee343ae5c5a.png",
+        "selected_source_sha256": "950ffa0b75d8c812c5353de4507c9386ef1e1c6cabbcceb33cede999a1969ed8",
+        "final_image": "origin_image/slide_04.png",
+        "final_image_sha256": "950ffa0b75d8c812c5353de4507c9386ef1e1c6cabbcceb33cede999a1969ed8",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "TCP message-boundary explanation and JSON field names are accurate and legible; request-response direction is clear.",
+        "recorded_at": "2026-07-02T09:49:09Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_05",
+      "number": 5,
+      "title": "三个实验从流程验证递进到跨阶段依赖",
+      "job": "prompts/slide_05.json",
+      "out": "origin_image/slide_05.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f2235-78d2-7650-842e-661beed070a1",
+        "agent_nickname": "Faraday",
+        "prompt": "prompts/slide_05.json",
+        "prompt_sha256": "9a16ee5f7f95b99ef66d6652be3022126ea054a0458e00f2625883c95311cfde",
+        "dispatched_at": "2026-07-02T09:43:11Z"
+      },
+      "result": {
+        "agent_id": "019f2235-78d2-7650-842e-661beed070a1",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f2235-78d2-7650-842e-661beed070a1\\exec-e8bfdb29-bd99-4f1a-a34a-12262cbc6338.png",
+        "selected_source_sha256": "e00ff4cae1923ae8780960c7280164d1f4fc317c844b32342434e5157de8d90d",
+        "final_image": "origin_image/slide_05.png",
+        "final_image_sha256": "e00ff4cae1923ae8780960c7280164d1f4fc317c844b32342434e5157de8d90d",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Three experiments form a clear progression from basic flow to compute intensity and cross-stage dependency; Chinese is readable.",
+        "recorded_at": "2026-07-02T09:45:23Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_06",
+      "number": 6,
+      "title": "实验一验证流程正确，但小任务无法体现并行优势",
+      "job": "prompts/slide_06.json",
+      "out": "origin_image/slide_06.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f2235-8d0b-7650-9a42-ec1d4f6102f1",
+        "agent_nickname": "Bohr",
+        "prompt": "prompts/slide_06.json",
+        "prompt_sha256": "57e9322228e282a6c3db3c2a3aa1f7287f69f07f5e14bf57b33c36c337fc6d67",
+        "dispatched_at": "2026-07-02T09:43:11Z"
+      },
+      "result": {
+        "agent_id": "019f2235-8d0b-7650-9a42-ec1d4f6102f1",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f2235-8d0b-7650-9a42-ec1d4f6102f1\\exec-30680de2-e15c-4fd1-beb0-98b290329802.png",
+        "selected_source_sha256": "7b051715b01b05f8884d6e02c9848f4ed3ccb67aeb73473c8cddba3affb05939",
+        "final_image": "origin_image/slide_06.png",
+        "final_image_sha256": "7b051715b01b05f8884d6e02c9848f4ed3ccb67aeb73473c8cddba3affb05939",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "All experiment-one values are correct, the reduction flow is clear, and no unsupported timing data is shown.",
+        "recorded_at": "2026-07-02T09:45:23Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_07",
+      "number": 7,
+      "title": "计算密集型任务取得约 2 倍端到端加速",
+      "job": "prompts/slide_07.json",
+      "out": "origin_image/slide_07.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "accepted",
+      "dispatch": null,
+      "result": {
+        "final_image": "origin_image/slide_07.png",
+        "accepted_sample": true
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_08",
+      "number": 8,
+      "title": "两轮同步使纯计算加速转化为系统减速",
+      "job": "prompts/slide_08.json",
+      "out": "origin_image/slide_08.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f223c-2a63-7af2-9a31-88f014a6fa85",
+        "agent_nickname": "Mill",
+        "prompt": "prompts/slide_08.json",
+        "prompt_sha256": "b941b26a0b01017957afdc184591b4234a4de5bd68443bbe3d18ab2f3f116535",
+        "dispatched_at": "2026-07-02T09:50:41Z"
+      },
+      "result": {
+        "agent_id": "019f223c-2a63-7af2-9a31-88f014a6fa85",
+        "backend_used": "built-in image_gen",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f223c-2a63-7af2-9a31-88f014a6fa85\\exec-f082e548-d527-44b3-8e48-d770789cc32d.png",
+        "selected_source_sha256": "61f64a3c255d6ff334b56b58d865f255ba6342726b893da17a4db3883ff4d929",
+        "final_image": "origin_image/slide_08.png",
+        "final_image_sha256": "61f64a3c255d6ff334b56b58d865f255ba6342726b893da17a4db3883ff4d929",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Exactly three Map branches are shown in each round; all candidate values, timings, and speedups are accurate and legible.",
+        "recorded_at": "2026-07-03T04:42:46Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_09",
+      "number": 9,
+      "title": "任务粒度、通信轮次和负载均衡共同决定性能",
+      "job": "prompts/slide_09.json",
+      "out": "origin_image/slide_09.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f223c-53b7-71e2-85a3-3bd430137610",
+        "agent_nickname": "Godel",
+        "prompt": "prompts/slide_09.json",
+        "prompt_sha256": "b75e1fef7ed61f6c13ea231026050721a11c539546e7362ab6178c51cdf82bb6",
+        "dispatched_at": "2026-07-02T09:50:41Z"
+      },
+      "result": {
+        "agent_id": "019f223c-53b7-71e2-85a3-3bd430137610",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f223c-53b7-71e2-85a3-3bd430137610\\exec-3865bae5-75d7-4b30-b0c8-e8a606e59cc5.png",
+        "selected_source_sha256": "5e00bf5e6810b46ece28a7a1e759354d4f2ed3bab754954fb07e78507be366c3",
+        "final_image": "origin_image/slide_09.png",
+        "final_image_sha256": "5e00bf5e6810b46ece28a7a1e759354d4f2ed3bab754954fb07e78507be366c3",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "Three-experiment comparison matrix is accurate, legible, and ends with the correct system-level evaluation conclusion.",
+        "recorded_at": "2026-07-03T04:10:53Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_10",
+      "number": 10,
+      "title": "优化重点应从增加节点转向减少无效开销",
+      "job": "prompts/slide_10.json",
+      "out": "origin_image/slide_10.png",
+      "input_images": [],
+      "requires_context_images": false,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "019f223c-3f00-7420-ab54-353f266615ac",
+        "agent_nickname": "Zeno",
+        "prompt": "prompts/slide_10.json",
+        "prompt_sha256": "6f803ebb132496142cdd8424d4167500cb938f3b116ff56b57425afcb39917bd",
+        "dispatched_at": "2026-07-02T09:50:41Z"
+      },
+      "result": {
+        "agent_id": "019f223c-3f00-7420-ab54-353f266615ac",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\Yansf\\.codex\\generated_images\\019f223c-3f00-7420-ab54-353f266615ac\\exec-49b82071-314c-4e8a-8e5c-bc1f01624899.png",
+        "selected_source_sha256": "68151e8e92b5b496362f095ac527f1f5db2f265f5cb085e48683c149c44a4f2b",
+        "final_image": "origin_image/slide_10.png",
+        "final_image_sha256": "68151e8e92b5b496362f095ac527f1f5db2f265f5cb085e48683c149c44a4f2b",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "All five optimization actions and the final engineering conclusion are accurate and legible; layout is clean.",
+        "recorded_at": "2026-07-03T04:13:08Z"
+      },
+      "blocker": null
+    }
+  ],
+  "updated_at": "2026-07-03T04:42:46Z"
+}
