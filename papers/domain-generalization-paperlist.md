@@ -12,6 +12,7 @@
 | --- | --- | ---: | --- | --- | --- | --- |
 | G001 | [Domain Generalization: A Survey](https://arxiv.org/abs/2103.02503) | 2023 | IEEE TPAMI 2023 / CCF A | 领域泛化综述、OOD泛化、域偏移、模型鲁棒性 | [笔记](../notes/G001-Domain-Generalization-Survey-阅读笔记.md) | 系统梳理领域泛化的定义、与领域适应的区别、方法分类、评测设置和理论问题，是后续阅读DG论文的总入口。 |
 | G002 | [Learning to Generalize: Meta-Learning for Domain Generalization](https://arxiv.org/abs/1710.03463) | 2018 | AAAI 2018 | 元学习、领域泛化、跨域梯度一致性 | [笔记](../notes/G002-Learning-to-Generalize-MLDG-阅读笔记.md) | 提出MLDG，把源域划分为模拟训练域和模拟测试域，通过元学习让模型参数更新后仍能在未见域上表现稳定。 |
+| G003 | [Generalizing to Unseen Domains via Adversarial Data Augmentation](https://arxiv.org/abs/1805.12018) | 2018 | NeurIPS 2018 | 单源领域泛化、分布鲁棒优化、对抗数据增强 | [笔记](../notes/G003-Generalizing-to-Unseen-Domains-对抗数据增强-阅读笔记.md) | 在单一源域上迭代生成语义保持的困难样本和虚拟域，以分布鲁棒优化提升模型对未见域的泛化能力。 |
 
 ## 一、当前已纳入仓库的相关论文
 
